@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+  <title>Variable</title>
+
+  <link href="http://mikekavouras.com/mike.css" rel="stylesheet">
+
+  <style>
+    .content {
+      max-width: 500px;
+      margin: 0px auto;
+    }
+
+    .code {
+      width: 100%;
+    }
+  </style>
+</head>
+  <body>
+    <div class="content">
+    <h1>Variable</h1>
+
+    <p>
+    <b>Wikipedia:</b> A storage location and an associated symbolic name (an identifier)
+    which contains some known or unknown quantity or information, a value.
+    </p>
+
+    <hr>
+
+    <p>
+    The most basic definition of a variable is: A name for something.
+    More specifically, a way to identify something (a value) by a specific name.
+    </p>
+
+    <p>
+    For instance, let's think about a person's name.  A person's name
+    is a word used to reference an entire person. The word itself doesn't
+    tell us anything specific about the person, but it gives us a way to reference
+    one specific person in a crowd full of people.
+    </p>
+
+    <p>
+    Let's create a new variable called <code>personsName</code>.
+    </p>
+    <div class="code">
+<pre>
+<code>
+var personsName;
+</code>
+</pre>
+    </div>
+
+
+    <p>
+    Variables aren't really useful until they have a value.
+    For instance, the name "Sam" doesn't mean very much unless
+    there is a person associated with it.
+    </p>
+
+
+    <p>
+    Let's reate a new variable without a value.
+    </p>
+
+<div class="code">
+<pre>
+<code>
+var sam;
+</code>
+</pre>
+</div>
+
+    <p>
+    Now, let's add a value to our new variable.
+    </p>
+
+<div class="code">
+<pre>
+<code>
+sam = new Person();
+</code>
+</pre>
+</div>
+
+
+    <p>
+    You can actually combine the 2 lines above. The following
+    example creates a new variable, <code>sam</code>, and gives
+    it a value, all at the same time.
+    </p>
+
+<div class="code">
+<pre>
+<code>
+var sam = new Person();
+</code>
+</pre>
+</div>
+
+    <p>
+    At this point, the variable <code>sam</code> is referencing a person,
+    and we can use this variable to access information about that
+    specific person.
+    </p>
+
+<div class="code">
+<pre>
+<code>
+sam.name; -> "Sam"
+sam.age; -> 17
+sam.height; -> 68
+</code>
+</pre>
+</div>
+
+    <p>
+    We use the <code>var</code> keyword to create a new variable.
+    Once it's been created, you can drop the <code>var</code>.
+    </p>
+
+<div class="code">
+<pre>
+<code>
+var one = 1;
+one = 2;
+one = 3;
+
+one; -> 3
+</code>
+</pre>
+</div>
+
+
+    <p>
+    A variable's name is unique. If you attempt to use the same
+    variable more than once, each new declaration will override
+    the previous one.
+    </p>
+
+<div class="code">
+<pre>
+<code>
+sam = "dog";
+sam = 1;
+
+sam; -> 1
+</code>
+</pre>
+</div>
+
+    <p>
+    <code>sam</code> is no longer referencing a person, but instead the number 1.
+    Let's make <code>sam</code> a person again.
+    </p>
+
+<div class="code">
+<pre>
+<code>
+sam = new Person();
+</code>
+</pre>
+</div>
+
+  </div>
+
+  </body>
+</html>
+
