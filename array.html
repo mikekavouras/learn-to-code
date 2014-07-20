@@ -138,7 +138,6 @@ peopleAllergicToNuts[4]; <span class="comment">// ?????? (UH OH)</span>
 </pre>
 </div>
 
-
     <h3>????? (UH OH)</h3>
 
     <p>
@@ -148,8 +147,6 @@ peopleAllergicToNuts[4]; <span class="comment">// ?????? (UH OH)</span>
       will just put your code in an unstable state. We'll go over
       ways to prevent this later. In the meantime, don't do it.
     </p>
-
-
 
     <h2>Adding elements to an array</h2>
 
@@ -163,6 +160,8 @@ peopleAllergicToNuts[4]; <span class="comment">// ?????? (UH OH)</span>
 <div class="code">
 <pre>
 <code>
+peopleAllergicToNuts; <span class="comment">// [sam, alex, dylan, hunter]</span>
+
 var casey = new Person();
 peopleAllergicToNuts[4] = casey;
 peopleAllergicToNuts; <span class="comment">// [sam, alex, dylan, hunter, casey]</span>
@@ -179,6 +178,8 @@ peopleAllergicToNuts; <span class="comment">// [sam, alex, dylan, hunter, casey]
 <div class="code">
 <pre>
 <code>
+peopleAllergicToNuts; <span class="comment">// [sam, alex, dylan, hunter, casey]</span>
+
 var taylor = new Person();
 peopleAllergicToNuts.push(taylor);
 peopleAllergicToNuts; <span class="comment">// [sam, alex, dylan, hunter, casey, taylor]</span>
@@ -210,6 +211,8 @@ peopleAllergicToNuts; <span class="comment">// [sam, alex, dylan, hunter, casey,
 <div class="code">
 <pre>
 <code>
+peopleAllergicToNuts; <span class="comment">// [sam, alex, dylan, hunter, casey, taylor];</span>
+
 var blake = new Person();
 peopleAllergicToNuts[2] = blake;
 peopleAllergicToNuts; <span class="comment">// [sam, alex, blake, hunter, casey, taylor];</span>
