@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+  <title>Array</title>
+
+  <link href="http://mikekavouras.com/mike.css" rel="stylesheet">
+  <link href="lessons.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="content">
+
+    <p>
+       <a href="/learn-to-code/variable">variables</a>
+    </p>
+
+    <h1> Array (Collection, List)</h1>
+
+    <p>
+      <b>Wikipedia:</b> Generally, a collection of data items that can
+      be selected by indices computed at run-time.
+    </p>
+
+    <hr>
+
+    <p>
+      An array, in its simplest form, is a collection of things (elements).
+    </p>
+
+    <p>
+      An array keeps its elements inside of a left bracket and a
+      right bracket, like this: <code>[]</code>
+    </p>
+
+
+    <p>
+      Let's create a new array with 0 elements and assign it to
+      the variable <code>emptyArray</code>.
+    </p>
+
+<div class="code">
+<pre>
+<code>
+var emptyArray = [];
+</code>
+</pre>
+</div>
+
+
+    <p>
+      The variable <code>emptyArray</code> is now referencing a new array with 0 elements.
+    </p>
+
+    <p>
+      In theory, an array can contain infinite elements. In reality, however,
+      the number of elements in an array is limited by the memory of the
+      computer. Each element inside of an array is separated by a comma.
+    </p>
+
+<div class="code">
+<pre>
+<code>
+var newArray = [thing1, thing2, thing3, thing4];
+</code>
+</pre>
+</div>
+
+
+    <p>
+      A practical example of an array would be a collection of people.
+      Let's say we have group of friends who are allergic to nuts. We would like
+      to keep track of the people with this allergy so that can we make sure they
+      are never served nuts.
+    </p>
+
+
+<div class="code">
+<pre>
+<code>
+var sam = new Person();
+var alex = new Person();
+var dylan = new Person();
+var hunter = new Person();
+
+var peopleAllergicToNuts = [sam, alex, dylan, hunter];
+</code>
+</pre>
+</div>
+
+    <p>
+      We now have an array containing all of our friends who
+      are allergic to nuts. Instead of asking everyone the next
+      time we order lunch, we can just take a look at our array.
+    </p>
+
+    <h2>Accessing elements in an array</h2>
+
+    <p>
+      In order to figure out which of our friends are allergic to nuts,
+      we need a way to retrieve the elements from our array.
+      The elements of an array are accessed with a special property
+      called an <u>index</u>. An index is nothing more than the numeric
+      position of an element. The only catch is that this index doesn't
+      start at 1, it starts at 0.
+    </p>
+
+    <p>
+      Let's try and access the first person who is allergic to nuts and
+      assign it to a new variable, <code>firstAllergicPerson</code>.
+    </p>
+
+<div class="code">
+<pre>
+<code>
+var firstAllergicPerson = peopleAllergicToNuts[0]; <span class="comment">// sam</span>
+</code>
+</pre>
+</div>
+
+    <p>
+      Notice the <u>syntax</u>. We're using the name of the variable referencing
+      our array, <code>peopleAllergicToNuts</code> followed by <code>[0]</code>. The brackets
+      tell our array that we're attempting to access an element.
+      The 0 is the index of the element we're attempting to access
+      (remember, our indices begin at 0, not 1).
+    </p>
+
+<div class="code">
+<pre>
+<code>
+peopleAllergicToNuts[0]; <span class="comment">// sam</span>
+peopleAllergicToNuts[1]; <span class="comment">// alex</span>
+peopleAllergicToNuts[2]; <span class="comment">// dylan</span>
+peopleAllergicToNuts[3]; <span class="comment">// hunter</span>
+peopleAllergicToNuts[4]; <span class="comment">// ?????? (UH OH)</span>
+</code>
+</pre>
+</div>
+
+
+    <h3>????? (UH OH)</h3>
+
+    <p>
+      There are times when you'll attempt to access an element that
+      doesn't exist (the last line in the example above). This can
+      be very problematic. Certain programs will crash, while others
+      will just put your code in an unstable state. We'll go over
+      ways to prevent this later. In the meantime, don't do it.
+    </p>
+
+
+
+    <h2>Adding elements to an array</h2>
+
+    <p>
+      Often you'll find yourself wanting to add new elements to an
+      array. Say we discover than our other friend, Casey, is also
+      allergic to nuts. There are a few ways add new elements to
+      an array. One way is to use an explicit index.
+    </p>
+
+<div class="code">
+<pre>
+<code>
+var casey = new Person();
+peopleAllergicToNuts[4] = casey;
+peopleAllergicToNuts; <span class="comment">// [sam, alex, dylan, hunter, casey]</span>
+</code>
+</pre>
+</div>
+
+    <p>
+      The safer way to add an element is by asking the array
+      to add it for you. To do this you ask the array
+      to "push" a new element "on top" of the current list.
+    </p>
+
+<div class="code">
+<pre>
+<code>
+var taylor = new Person();
+peopleAllergicToNuts.push(taylor);
+peopleAllergicToNuts; <span class="comment">// [sam, alex, dylan, hunter, casey, taylor]</span>
+</code>
+</pre>
+</div>
+
+    <p>
+      Generally, arrays are smarter than they appear. They have the ability to manipulate themselves,
+      like adding or removing elements, as well as the ability to communicate information that we may
+      find useful. For instance, an array has the ability to tell us how many elements it has at
+      any given moment. We can rely on these features to build safer code.
+    </p>
+
+
+    <h2>Changing elements in an array</h2>
+
+    <p>
+      There will be times when you need to change an existing element
+      in an array. Say, for instance, our buddy Dylan has suddenly been cured,
+      and at the exact same moment we found out that our friend Blake is horribly
+      allergic and will die at the simple touch of a nut.
+    </p>
+
+    <p>
+      Let's use what we know to replace Dylan with Blake.
+    </p>
+
+<div class="code">
+<pre>
+<code>
+var blake = new Person();
+peopleAllergicToNuts[2] = blake;
+peopleAllergicToNuts; <span class="comment">// [sam, alex, blake, hunter, casey, taylor];</span>
+</code>
+</pre>
+</div>
+
+    <p>
+      Notice how the third element (index 2), <code>dylan</code>, was replaced by our new friend, <code>blake</code>.
+    </p>
+</body>
+</html>
