@@ -38,3 +38,22 @@ pre {
   display: block;
 }
 
+.next-lesson,
+.previous-lesson {
+  margin: 20px 0px;
+  color: #555;
+}
+
+.next-lesson {
+  float: right;
+}
+
+.previous-lesson {
+  float: left;
+}
+
+.next-lesson:hover,
+.previous-lesson:hover {
+  color: #222;
+  text-decoration: underline;
+}
