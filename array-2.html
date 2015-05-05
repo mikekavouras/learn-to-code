@@ -20,14 +20,14 @@
       </p>
     </div>
 
-    <h2>Accessing elements in an array</h2>
+    <h2>Accessing items in an array</h2>
 
     <p>
       In order to remember which of our friends are allergic to nuts,
-      we need a way to retrieve the elements from our array.
-      The elements of an array are accessed with a special property
+      we need a way to retrieve the items from our array.
+      The items of an array are accessed with a special property
       called an <u>index</u>. An index is nothing more than the numeric
-      position of an element. The only catch is that this index doesn't
+      position of an item. The only catch is that this index doesn't
       start at 1, it starts at 0.
     </p>
 
@@ -47,8 +47,8 @@
     <p>
       Notice the <u>syntax</u>. We're using the name of the variable referencing
       our array, <code>peopleAllergicToNuts</code> followed by <code>[0]</code>. The brackets
-      tell our array that we're attempting to access an element.
-      The 0 is the index of the element we're attempting to access
+      tell our array that we're attempting to access an item.
+      The 0 is the index of the item we're attempting to access
       (remember, our indices begin at 0, not 1).
     </p>
 
@@ -67,19 +67,18 @@ peopleAllergicToNuts[4]; <span class="comment">// ?????? (UH OH)</span></code>
     <h3>????? (UH OH)</h3>
 
     <p>
-      There are times when you'll attempt to access an element that
+      There are times when you'll accidentally attempt to access an item that
       doesn't exist (the last line in the example above). This can
-      be very problematic. Certain programs will crash, while others
-      will just make your code unstable. We'll go over
+      be problematic. Most programs will crash. We'll go over
       ways to prevent this later. In the meantime, don't do it.
     </p>
 
-    <h2>Adding elements to an array</h2>
+    <h2>Adding items to an array</h2>
 
     <p>
-      Often you'll find yourself wanting to add new elements to an
+      Often you'll find yourself wanting to add new items to an
       array. Say we discover than our other friend, Casey, is also
-      allergic to nuts. There are a few ways add new elements to
+      allergic to nuts. There are a few ways add new items to
       an array. One way is to use an explicit index.
     </p>
 
@@ -96,9 +95,9 @@ peopleAllergicToNuts; <span class="comment">// [sam, alex, dylan, hunter, casey]
 </div>
 
     <p>
-      The safer way to add an element is by asking the array
+      The safer way to add an item is by asking the array
       to add it for you. To do this you ask the array
-      to "push" a new element "on top" of the current list.
+      to "push" a new item "on top" of the current list.
     </p>
 
 <div class="code">
